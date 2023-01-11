@@ -1,10 +1,19 @@
+//UI Logic
 window.onload = function() {
-  let letter = document.querySelector("letter");
-  Form.onsubmit = function(event) {
-    const userInput = document.getElementById("userInput").ariaValueMax;
+  console.log("Script executing!");
+
+  let form = document.querySelector("form");
+  form.onsubmit = function(event) {
+    event.preventDefault();
+    const userInput = document.getElementById("userInput").value;
+    
+    console.log("Submit letter successful");
+   
 
     document.querySelector("span#userInputa").innerText = userInput;
 
-    event.preventDefault();
+    
+
+    document.querySelector("div#story").removeAttribute("class");
   }
 }
